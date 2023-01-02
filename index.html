@@ -1,83 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>나만의 동기부여 홈화면 만들기</title>
-
-    <script src="index.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
+<html>
+    <head>
+        <!-- 웹페이지 보이지는 않지만, 필요한 설정을 해두는 곳이에요.
+             우리가 집을 위해 미리 생각 해놓은 것을 적어두는 곳이라고 할 수 있죠!-->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="김동우 - 프로필 링크" />
+        <meta property="og:description" content="코딩을 공부중입니다" />
+        <meta property="og:image" content="공유할 이미지" />
+        <title>르탄이 - 프로필 링크</title>
+        <style>
+            @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Pretendard",serif;
         }
+            body {
+                background-color: #44398A;
+            }
+            .profile {
+                width: 100px;
+                height: 100px;
 
-       body {
-        background-image: url("https://cdn.britannica.com/46/154246-050-7C72E12F/view-Rome.jpg");
+                
+                border-radius: 100%;
 
-        background-position: center;
-        
-        color: white;
-    }
+                border : 2px solid white;
 
-    .time {
-        font-size: 80px;
-        font-weight: bold;
-    }
+                background-image: url('포롱이.jpg');
+                background-position: center;
+                background-size: cover;
+            }
+            .main {
+                color: white;
+                font-size: 20px;
 
-    .greeting {
-        font-size: 50px;
-    }
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .sub {
+                color: white;
+                font-size: 14px;
 
-    .todo {
-        font-size: 30px;
-    }
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+            .wrap {
+                width: 300px;
+                margin: 30px auto 0px auto;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrap > a {
+                width: 300px;
+                height: 50px;
 
-    .author {
-        font-size: 25px;
-        font-style: italic;
-    }
+                background-color: white;
+                border-radius: 8px;
 
-    .main {
-        width: 100vw;
-        height: 80vh;
+                margin-bottom: 10px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+                font-size: 14px;
+                font-weight: bold;
+                color: #44398A;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-    .quote {
-        width: 100vw;
-        height: 20vh;
+                text-decoration: none;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+                box-shadow: 3px 3px 5px 0px black;
+            }
+            .wrap > a:hover {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="profile"></div>
+            <h1 class="main">김동우</h1>
+            <p class="sub">코팅 배우는중입니다!</p>
+            <a target="_blank" href="https://www.instagram.com/ruda043/">인스타그램</a>
 
-    </style>
-
-    <script>
-    </script>
-</head>
-
-<body>
-    <div class="main">
-        <div id="time" class="time">12:00</div>
-        <div class="greeting">Hello, dongwoo</div>
-        <div class="todo">매일 스쿼트 100개하기</div>
-    <div class="quote">
-        <div id="author" class="author">- 명언의 저자 -</div>
-        <div id="content" class="content">" 명언의 내용 "</div>
-    </div>
-</body>
-
+        </div>
+       
+    </body>
 </html>
